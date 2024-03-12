@@ -145,9 +145,9 @@ services:
     volumes:
       - certs:/usr/share/logstash/certs
       - logstashdata01:/usr/share/logstash/data
-      - "./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro"
-      - "./logstash/pipeline/cdmx-seguridad.conf:/usr/share/logstash/pipeline/cdmx-seguridad.conf:ro"
-      - "./logstash/templates/cdmx-seguridad.json:/usr/share/logstash/templates/cdmx-seguridad.json:ro"
+      - "./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml"
+      - "./logstash/pipeline:/usr/share/logstash/pipeline"
+      - "./logstash/templates:/usr/share/logstash/templates"
     environment:
       - xpack.monitoring.enabled=false
       - ELASTIC_USER=elastic
