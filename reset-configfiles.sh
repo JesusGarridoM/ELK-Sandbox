@@ -3,7 +3,7 @@ rm logstash/config/*
 
 rm logstash/pipeline/*
 
-rm logstash/templates/*
+sudo rm logstash/templates/*
 
 sudo rm -rf certs
 
